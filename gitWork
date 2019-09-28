@@ -17,3 +17,9 @@ Taggin :
 	git aliases	git config --global alias.[AB] [command]
 		exp:	git config --global alias.ci commit
 
+
+Branch:
+	creating branch		git branch [fileName]
+	see which branch you are there		git log --oneline --decorate
+	switching branches	git checkout [branchName]
+
