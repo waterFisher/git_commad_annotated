@@ -1,0 +1,19 @@
+Inspecting a Remote
+	git remote show origin
+
+Removing and renaming Remotes
+	git remote rename <old> <new>
+	git remote rm <remote>			//will be delete immediately
+
+Taggin :
+	listing tag	git tag
+	searching tag 	git tag -l "STRINGS"
+	creating tag 	annotated tags 	git tag -a [tags] -m "some message"
+			lightweight tags 	git tag [tags]
+	show tag message 	git show [tags]
+	tagging later		git tag -a [tags] <sha>	//if you forgot to tag,this command will be helpful to tag later.
+	sharing tags	git push origin [tags]
+			git push origin --tags   //one shot but more tags will be transfers
+	git aliases	git config --global alias.[AB] [command]
+		exp:	git config --global alias.ci commit
+
