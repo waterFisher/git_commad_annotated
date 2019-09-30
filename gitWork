@@ -1,22 +1,22 @@
 git init
 git clone
 git status     git status -s
-git diff		
-git add [files]  
+git diff
+git add [files]
 git commit -m "XXXXXXX"
 git commit -a                // leting you skip "git add "part ,will automatically staged file and commit
-git pull		// fecth & merge 
+git pull		// fecth & merge
 git push
-git rm      OR   git rm --cache  [file]   
+git rm      OR   git rm --cache  [file]
 git restore <file>     	// can restore file which you run "rm " to delete it .
 git checkout <sha> -- <file name>    // bring back deleted file
 git mv [file1] [file2]
 git log --stat    		//show details
 git log --pretty=oneline		// show simple information
-git log --pretty=format:"%h %s" --graph	//formating information 
+git log --pretty=format:"%h %s" --graph	//formating information
 
 git add [file1]    //follow with "git commit --amend" can add file and amend commit message
-git commit --amend 	//edit previous message 
+git commit --amend 	//edit previous message
 
 Inspecting a Remote
 	git remote show origin
@@ -24,6 +24,9 @@ Inspecting a Remote
 Removing and renaming Remotes
 	git remote rename <old> <new>
 	git remote rm <remote>			//will be delete immediately
+
+Adding Remote
+		git remote add [remoteName]
 
 Taggin :
 	listing tag	git tag
@@ -42,6 +45,30 @@ Branch:
 	creating branch		git branch [fileName]
 	see which branch you are there		git log --oneline --decorate
 	switching branches	git checkout [branchName]
+						git checkout -b [branchName]		//changing and switching
+						git checkout -b [newBranch] [origin/branch]
+	Tracking branches
+						git checkout --track [origin/branch]
+						git checkout -b [newBranch]  [origin/branch]
+						git checkout -u [origin/branch] 	//local branch set it to remote branch
+    view branches
+						git branch -vv
+	deleting remote branch
+						git push --delete [remoteBranch]
 
 
+	merge				git merge [branchName]
+	merge conflict		git add [file] 			//add file and marker resolution
+	to see last commit each branches	git branch -v
+	to see have merged or unmerged
+						git branch { --merge | --no-merge }
 
+
+Pushing
+	git push <remote> <branch>
+
+Don't type your password every time
+	git config --global credential.helper cache
+
+Rebasing
+		git rebase [branch]
