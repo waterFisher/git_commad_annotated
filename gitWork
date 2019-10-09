@@ -72,3 +72,11 @@ Don't type your password every time
 
 Rebasing
 		git rebase [branch]
+
+
+Git on the server
+
+local protocol
+	to add local exsiting repo
+		git remote add [local_project] [local_project_path]
+		
