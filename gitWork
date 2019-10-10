@@ -79,4 +79,5 @@ Git on the server
 local protocol
 	to add local exsiting repo
 		git remote add [local_project] [local_project_path]
-		
+
+git clone --bare [my_project] [my_project.git]		\\without a working directory, but creates a repo
