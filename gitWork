@@ -80,4 +80,9 @@ local protocol
 	to add local exsiting repo
 		git remote add [local_project] [local_project_path]
 
-git clone --bare [my_project] [my_project.git]		\\without a working directory, but creates a repo
+git clone --bare [my_project] [my_project.git]		\\without a working directory, but a repo*
+													\\taking project .git dir* files
+git init --bare --shared							\\it will be helpful for Remote git pull or git push
+
+
+adding test string
