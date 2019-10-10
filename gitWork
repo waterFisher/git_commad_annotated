@@ -83,6 +83,3 @@ local protocol
 git clone --bare [my_project] [my_project.git]		\\without a working directory, but a repo*
 													\\taking project .git dir* files
 git init --bare --shared							\\it will be helpful for Remote git pull or git push
-
-
-adding test string
