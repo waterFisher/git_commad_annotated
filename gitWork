@@ -83,3 +83,7 @@ local protocol
 git clone --bare [my_project] [my_project.git]		\\without a working directory, but a repo*
 													\\taking project .git dir* files
 git init --bare --shared							\\it will be helpful for Remote git pull or git push
+
+git push -u origin [local_branch] : [remote_branch]
+													\\ -u mean --set-upstream
+git log [local_branch]..origin/[remote_branch]		\\push from remote and see what is differant
