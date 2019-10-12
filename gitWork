@@ -87,3 +87,11 @@ git init --bare --shared							\\it will be helpful for Remote git pull or git p
 git push -u origin [local_branch] : [remote_branch]
 													\\ -u mean --set-upstream
 git log [local_branch]..origin/[remote_branch]		\\push from remote and see what is differant
+
+git cherry-pick [SHA]								\\select commit what you need and dump you didn't
+
+git describe [branch]								\\human readable tags
+
+git archive [branch] --prefix='project' | gzip > `git describe master`.gzip		\\archive tar
+
+git shortlog --no-merges master{branch} --not [tag]
