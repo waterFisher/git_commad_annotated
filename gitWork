@@ -75,6 +75,7 @@ Rebasing
 		git rebase [baseBranch] [topicBranch]
 		git rebase [branch]
 
+
 “Check out the client branch, figure out the patches from the common ancestor of the client and server branches, and then replay them onto master.”	
 		git rebase --onto master server client
 Rebase when you rebase
@@ -83,4 +84,26 @@ Rebase when you rebase
 adding remote repo to exist repo
 		git remote add [local_repo] [remote_URL]
 
+
+Git on the server
+
+local protocol
+	to add local exsiting repo
+		git remote add [local_project] [local_project_path]
+
+git clone --bare [my_project] [my_project.git]		\\without a working directory, but a repo*
+													\\taking project .git dir* files
+git init --bare --shared							\\it will be helpful for Remote git pull or git push
+
+git push -u origin [local_branch] : [remote_branch]
+													\\ -u mean --set-upstream
+git log [local_branch]..origin/[remote_branch]		\\push from remote and see what is differant
+
+git cherry-pick [SHA]								\\select commit what you need and dump you didn't
+
+git describe [branch]								\\human readable tags
+
+git archive [branch] --prefix='project' | gzip > `git describe master`.gzip		\\archive tar
+
+git shortlog --no-merges master{branch} --not [tag]
 
