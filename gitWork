@@ -66,9 +66,21 @@ Branch:
 
 Pushing
 	git push <remote> <branch>
+	pushing to overwrite the history	git push --force
 
 Don't type your password every time
 	git config --global credential.helper cache
 
-Rebasing
+Rebasing	
+		git rebase [baseBranch] [topicBranch]
 		git rebase [branch]
+
+“Check out the client branch, figure out the patches from the common ancestor of the client and server branches, and then replay them onto master.”	
+		git rebase --onto master server client
+Rebase when you rebase
+		git pull --rebase
+
+adding remote repo to exist repo
+		git remote add [local_repo] [remote_URL]
+
+
